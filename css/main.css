@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:200,400,600&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: linear-gradient(135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%));
+	font-family: 'Josefin Sans', sans-serif;
+}
+/*utility tags*/
+.container{
+	display: flex;
+	min-height:  100vh;
+}
+.showcase-left{
+	width: 60%;
+	background: url('../images/bg-pattern-desktop.svg')  repeat top center/cover;
+	padding: 0 40px 40px;
+}
+.inner-content{
+	max-width: 480px;
+	margin: auto;
+}
+.inner-content .logo{
+	margin: 60px 0;
+	width: 150px;
+}
+.inner-content .mobile-img{
+	display: none;
+}
+.inner-content h1{
+	color: hsl(0, 6%, 24%);
+	font-size: 60px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+.inner-content h1 span{
+	color:hsl(0, 36%, 70%);
+	font-weight: 200;
+}
+.inner-content p{
+	color: hsl(0, 36%, 70%);
+	margin: 25px 0;
+	line-height: 26px;
+	font-size: 13px;
+	width: 350px;
+}
+form{
+	position: relative;
+}
+#form input{
+	padding: 15px 30px;
+	width: 100%;
+	border-radius: 50px;
+	border: 1px solid hsl(0, 36%, 70%);
+	height: 55px;		
+}
+#form input:focus{
+	border-width: 1.5px;
+	outline: none;
+	box-shadow:inset 0px 0px 5px hsla(0, 36%, 70%, 0.5);
+}
+#form input::placeholder{
+	color: hsl(0, 36%, 70%);
+}
+button{
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: opacity 0.2s ease;
+	height: 55px;
+	width: 100px;
+	outline: none;
+}
+button:hover{
+	opacity: 0.6;
+}
+.error-icon{
+	position: absolute;
+	top: 15px;
+	right: 110px;
+	display: none;
+}
+form.error .error-icon {
+	display: block;
+}
+small{
+	color: hsl(0, 93%, 68%);
+	margin: 19px 0 0 30px;
+	display: none;
+}
+form.error small {
+	display: block;
+}
+.showcase-right{
+	background: url('../images/hero-desktop.jpg')no-repeat center center/cover;
+	width: 40%;
+}
+
+@media screen and (max-width: 600px){
+	.showcase-right{
+		display: none;
+	}
+	.showcase-left{
+		width: 100%;
+	}
+	.inner-content .mobile-img{
+	    display: block;
+		margin: 0 -40px 0 -46px;
+		width: 387px;	
+    }
+	.logo{
+		margin: 30px 0;
+		width: 100px;
+	}
+	
+	.inner-content h1{
+		font-size: 40px;
+		margin-top: 50px;
+		text-align: center;
+	}
+	.inner-content P{
+		width: 290px;
+		text-align: center;
+	}
+	 
+}
